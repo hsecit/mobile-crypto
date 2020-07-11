@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorBg1"
+    tools:context=".blockchain.BitTransactionViewFragment">
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/sanckbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="From"/>
+                <TextView
+                    android:id="@+id/bit_addresse"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="To"/>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/bit_receiver"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Addrese of re">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="text"
+                       />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="Amount"/>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/bit_Amount"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Coin Amount">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="numberDecimal"
+                       />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <Button
+                   android:id="@+id/sendBtn"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="60dp"
+                   android:text="Valid"/>
+           </LinearLayout>
+       </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</FrameLayout>

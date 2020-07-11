@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CryptoTransaction</string>
+    <string name="email">Email Adresse</string>
+    <string name="register_inf">First Time ?</string>
+    <string name="tab_a_label">BlockChain</string>
+    <string name="tab_b_label">TPS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send">" Account to be Debited"</string>
+    <string name="recipient">Account to be Credited</string>
+    <string name="send_to">Receiver</string>
+    <string name="amount">Amount</string>
+    <string name="erro_transaction">Transaction Failed</string>
+    <string name="succ_transaction">Transaction sccusseflul</string>
+    <string name="empty_transaction">All Field required...</string>
+</resources>

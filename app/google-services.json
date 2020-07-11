@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "801611067749",
+    "firebase_url": "https://cryptography-project-12233.firebaseio.com",
+    "project_id": "cryptography-project-12233",
+    "storage_bucket": "cryptography-project-12233.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801611067749:android:08d66cd4ab6755f3b7718c",
+        "android_client_info": {
+          "package_name": "tech.hsecit.project.crypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801611067749-ivm14h4175btpt8kv546ntlok3892gfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeBDmGsWViLjqlCuFfqRDsILE487L31sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801611067749-ivm14h4175btpt8kv546ntlok3892gfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
