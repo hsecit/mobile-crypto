@@ -53,20 +53,22 @@ public class ProfileActivity extends AppCompatActivity {
     private void bindAcountToProfile(FirebaseUser user) {
         if (user!=null){
             fdbase = FirebaseDatabase.getInstance();
-            dbRef = fdbase.getReference("accounts").child(user.getUid()).child(ACCOUNT_ID);
+            dbRef = fdbase.getReference("accounts").child(user.getUid());//.child(ACCOUNT_ID)
             dbRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                   //  HashMap<String,Object> ac = (HashMap<String, Object>) dataSnapshot.getValue();
-                    AccountData acc = dataSnapshot.getValue(AccountData.class);
-                     nom.setText(acc.getNom().toUpperCase());
-                    tel.setText(acc.getPhone());
-                    email.setText(user.getEmail());
-                    addr.setText(acc.getAddress());
-                    bank_account.setText(acc.getBank_account_number());
-                    bit_addr.setText(acc.getWallet().getPair_pub_addr().getPubaddr1());
-                    pubkey.setText(acc.getWallet().getPair_pub_addr().getPubkey());
-                    privatekey.setText(acc.getWallet().getPrivate_key().getHex());
+                    for (DataSnapshot ds: dataSnapshot.getChildren()){
+                        AccountData acc = ds.getValue(AccountData.class);
+                        nom.setText(acc.getNom().toUpperCase());
+                        tel.setText(acc.getPhone());
+                        email.setText(user.getEmail());
+                        addr.setText(acc.getAddress());
+                        bank_account.setText(acc.getBank_account_number());
+                        bit_addr.setText(acc.getWallet().getPair_pub_addr().getPubaddr1());
+                        pubkey.setText(acc.getWallet().getPair_pub_addr().getPubkey());
+                        privatekey.setText(acc.getWallet().getPrivate_key().getHex());
+                    }
                 }
 
                 @Override

@@ -129,13 +129,15 @@ public class BitTransactionViewFragment extends Fragment {
     private void bindAcountToProfile(FirebaseUser user) {
         if (user!=null){
             // TODO change it from statit to dinamic (the last child)
-            dbRef = FirebaseDatabase.getInstance().getReference("accounts").child(user.getUid()).child(ProfileActivity.ACCOUNT_ID);
+            dbRef = FirebaseDatabase.getInstance().getReference("accounts").child(user.getUid());///.child(ProfileActivity.ACCOUNT_ID)
             dbRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     //  HashMap<String,Object> ac = (HashMap<String, Object>) dataSnapshot.getValue();
-                    AccountData acc = dataSnapshot.getValue(AccountData.class);
-                    bit_addresse.setText(acc.getWallet().getPair_pub_addr().getPubaddr1());
+                    for (DataSnapshot ds: dataSnapshot.getChildren()){
+                        AccountData acc = ds.getValue(AccountData.class);
+                        bit_addresse.setText(acc.getWallet().getPair_pub_addr().getPubaddr1());
+                    }
 
                 }
 

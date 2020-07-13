@@ -11,7 +11,7 @@
     <string name="recipient">Account to be Credited</string>
     <string name="send_to">Receiver</string>
     <string name="amount">Amount</string>
-    <string name="erro_transaction">Transaction Failed</string>
-    <string name="succ_transaction">Transaction sccusseflul</string>
-    <string name="empty_transaction">All Field required...</string>
+    <string name="erro_transaction">Transaction Failed!</string>
+    <string name="succ_transaction">Transaction successful</string>
+    <string name="empty_transaction">all fields required!</string>
 </resources>

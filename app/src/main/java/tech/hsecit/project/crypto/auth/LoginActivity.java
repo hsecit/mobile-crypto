@@ -2,7 +2,9 @@ package tech.hsecit.project.crypto.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button login  ;
     TextView register_now;
     ImageButton  google_login;
-
+    ProgressDialog progressDialog;
     /// cals firebase com
     FirebaseAuth mAuth ;
     @Override

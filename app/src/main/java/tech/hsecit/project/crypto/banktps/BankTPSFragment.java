@@ -126,14 +126,17 @@ public class BankTPSFragment extends Fragment {
     private void bindAcountToProfile(FirebaseUser user) {
         if (user!=null){
             // TODO change it from statit to dinamic (the last child)
-            dbRef = FirebaseDatabase.getInstance().getReference("accounts").child(user.getUid()).child(ProfileActivity.ACCOUNT_ID);
+            dbRef = FirebaseDatabase.getInstance().getReference("accounts").child(user.getUid());
             dbRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     //  HashMap<String,Object> ac = (HashMap<String, Object>) dataSnapshot.getValue();
-                    AccountData acc = dataSnapshot.getValue(AccountData.class);
-                    nom.setText(acc.getNom().toUpperCase());
-                    account_number.setText(acc.getBank_account_number());
+
+                    for(DataSnapshot ds: dataSnapshot.getChildren()){
+                        AccountData acc = ds.getValue(AccountData.class);
+                        nom.setText(acc.getNom().toUpperCase());
+                        account_number.setText(acc.getBank_account_number());
+                    }
                 }
 
                 @Override
